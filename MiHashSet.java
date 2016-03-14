@@ -39,4 +39,11 @@ public class MiHashSet
     public void clear(){
         arrayInt.clear();
     }
+    
+    /**
+     * Metodo que devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
+     */
+    public boolean contains(int elemento){
+        return arrayInt.contains(elemento);
+    }
 }
