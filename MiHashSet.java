@@ -53,4 +53,19 @@ public class MiHashSet
     public boolean isEmpty(){
         return arrayInt.isEmpty();
     }
+    
+    /**
+     * Metodo que elimina del conjunto el elemento dado. Si no existiera devuelve falso;
+     * si existía en el conjunto devuelve verdadero.
+     */
+    public boolean remove(int elemento){
+        boolean devuelve = false;
+        if(contains(elemento)){
+            arrayInt.remove(arrayInt.indexOf(elemento));
+            devuelve = true;
+        }
+        return devuelve;
+    }
+    
+   
 }
