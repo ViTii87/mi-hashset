@@ -17,5 +17,19 @@ public class MiHashSet
     {
         arrayInt = new ArrayListInt();
     }
-
+    
+    /**
+     * Metodo que añade el elemento al conjunto si no estaba. Devuelve verdadero en 
+     * caso de que el elemento no estuviera presente en el conjunto y falso en caso contrario.
+     */
+    public boolean add(int valor) {
+        boolean devuelve = true;
+        if(arrayInt.contains(valor)){
+            devuelve = false;
+        }
+        else{
+            arrayInt.add(valor);
+        }
+        return devuelve;
+    }
 }
