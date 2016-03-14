@@ -7,12 +7,15 @@
  */
 public class MiHashSet
 {
+    // Usamos nuestro ArrayList de interos previamente creado
+    private ArrayListInt arrayInt;
+    
     /**
      * Constructor for objects of class MiHashSet
      */
     public MiHashSet()
     {
-    
+        arrayInt = new ArrayListInt();
     }
 
 }
