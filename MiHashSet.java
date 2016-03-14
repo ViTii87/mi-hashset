@@ -32,4 +32,11 @@ public class MiHashSet
         }
         return devuelve;
     }
+    
+    /**
+     * Metodo que vacía el conjunto.
+     */
+    public void clear(){
+        arrayInt.clear();
+    }
 }
