@@ -9,7 +9,7 @@ public class MiHashSet
 {
     // Usamos nuestro ArrayList de interos previamente creado
     private ArrayListInt arrayInt;
-    
+
     /**
      * Constructor for objects of class MiHashSet
      */
@@ -17,7 +17,7 @@ public class MiHashSet
     {
         arrayInt = new ArrayListInt();
     }
-    
+
     /**
      * Metodo que añade el elemento al conjunto si no estaba. Devuelve verdadero en 
      * caso de que el elemento no estuviera presente en el conjunto y falso en caso contrario.
@@ -32,28 +32,28 @@ public class MiHashSet
         }
         return devuelve;
     }
-    
+
     /**
      * Metodo que vacía el conjunto.
      */
     public void clear(){
         arrayInt.clear();
     }
-    
+
     /**
      * Metodo que devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
      */
     public boolean contains(int elemento){
         return arrayInt.contains(elemento);
     }
-    
+
     /**
      * Metodo devuelve verdadero si el conjunto no contiene elementos.
      */
     public boolean isEmpty(){
         return arrayInt.isEmpty();
     }
-    
+
     /**
      * Metodo que elimina del conjunto el elemento dado. Si no existiera devuelve falso;
      * si existía en el conjunto devuelve verdadero.
@@ -66,14 +66,14 @@ public class MiHashSet
         }
         return devuelve;
     }
-    
+
     /**
      * Metodo que devuelve el número de elementos del conjunto.
      */
     public int size(){
         return arrayInt.size();
     }
-    
+
     /**
      * Metodo que devuelve una cadena conteniendo todos los elementos del conjunto 
      * separados por comas y entre corchetes.
@@ -89,6 +89,26 @@ public class MiHashSet
             }
         }
         devuelve += "]";
+        return devuelve;
+    }
+
+    /**
+     * Metodo que devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto){
+        boolean devuelve = true;
+        if(otroConjunto.size() == arrayInt.size()){
+            int i = 0;
+            while(i < arrayInt.size() && devuelve){
+                if(!(otroConjunto.contains(arrayInt.get(i)))){
+                    devuelve = false;
+                }
+                i++;
+            }
+        }
+        else{
+            devuelve = false;
+        }
         return devuelve;
     }
 }
