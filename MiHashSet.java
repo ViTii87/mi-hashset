@@ -73,4 +73,22 @@ public class MiHashSet
     public int size(){
         return arrayInt.size();
     }
+    
+    /**
+     * Metodo que devuelve una cadena conteniendo todos los elementos del conjunto 
+     * separados por comas y entre corchetes.
+     */
+    public String toString(){
+        String devuelve = "[";
+        for(int i = 0; i < size(); i++ ){
+            if(i!=size()-1){
+                devuelve += arrayInt.get(i) + ",";
+            }
+            else{
+                devuelve += arrayInt.get(i);
+            }
+        }
+        devuelve += "]";
+        return devuelve;
+    }
 }
